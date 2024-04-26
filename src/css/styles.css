@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/pexels-apasaric-325185.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.element {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    left: 200px;
+    background-image: url(../img/icone-de-aeronave-voadora-vetor-isolado_24911-114304.avif);
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+}
