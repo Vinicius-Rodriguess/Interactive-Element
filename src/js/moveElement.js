@@ -109,7 +109,7 @@ class MoveElement {
             this.newPositionX = Math.max(borderLimit, Math.min(this.newPositionX, windowWidth - elementWidth))
             this.newPositionY = Math.max(borderLimit, Math.min(this.newPositionY, windowHeight - elementHeight))
         }
-
+        
         this.elementToMove.style.top = `${this.newPositionY}px`
         this.elementToMove.style.left = `${this.newPositionX}px`
     }

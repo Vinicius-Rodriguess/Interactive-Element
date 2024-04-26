@@ -22,4 +22,11 @@ body {
     background-size: contain;
     background-position: center;
     border-radius: 50%;
+    animation: move 1s infinite alternate ;
+}
+
+@keyframes move {
+    100% {
+        margin-top: .5em;
+    }
 }
