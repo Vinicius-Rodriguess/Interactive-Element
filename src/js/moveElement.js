@@ -5,11 +5,16 @@ class MoveElement {
         this.moving = false
         this.mousePositionX = 0
         this.mousePositionY = 0
-        this.newPositionX = this.elementToMove.getBoundingClientRect().x
-        this.newPositionY = this.elementToMove.getBoundingClientRect().y
+        this.newPositionX =  this.elementToMove.getBoundingClientRect().x
+        this.newPositionY =  this.elementToMove.getBoundingClientRect().y
         this.counter = 0
         this.setCounter = null
         this.millisecondToAction = 50
+
+        if (this.getLocalStorage()) {
+            this.elementToMove.style.top = this.getLocalStorage().positionY
+            this.elementToMove.style.left = this.getLocalStorage().positionX    
+        }
 
         this.handleDesktopEvents()
         this.handleMobileEvents()
@@ -112,6 +117,22 @@ class MoveElement {
         
         this.elementToMove.style.top = `${this.newPositionY}px`
         this.elementToMove.style.left = `${this.newPositionX}px`
+
+        this.saveLocalStorage(`${this.newPositionY}px`, `${this.newPositionX}px`)
+    }
+
+    saveLocalStorage(positionY, positionX) {
+        const coordinates = {positionY: positionY, positionX: positionX}
+        const json = JSON.stringify(coordinates)
+
+        localStorage.setItem("coordinates", json)
+    }
+
+    getLocalStorage() {
+        const json = localStorage.getItem("coordinates")
+        const coordinates = JSON.parse(json)
+
+        return coordinates
     }
 }
 
