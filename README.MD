@@ -34,7 +34,7 @@ Ou então:
 1. **Clone este Repositório**:
 
     ```bash
-    git clone https://github.com/seu-usuario/move-element.git
+    git clone https://github.com/Vinicius-Rodriguess/Interactive-Element.git
     cd move-element
     ```
 
